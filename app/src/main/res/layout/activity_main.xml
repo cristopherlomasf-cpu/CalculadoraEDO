@@ -23,13 +23,14 @@
             android:text="Vista previa:"
             android:paddingTop="4dp" />
 
-        <WebView
-            android:id="@+id/webPreview"
+        <ImageView
+            android:id="@+id/imagePreview"
             android:layout_width="match_parent"
             android:layout_height="140dp"
             android:layout_marginTop="4dp"
             android:layout_marginBottom="12dp"
             android:background="@android:color/white"
+            android:scaleType="centerInside"
             android:elevation="2dp" />
 
         <!-- Teclado matemático -->
@@ -181,11 +182,13 @@
             android:minHeight="80dp"
             android:paddingTop="4dp" />
 
-        <WebView
-            android:id="@+id/webLatex"
+        <ImageView
+            android:id="@+id/imageLatex"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:minHeight="100dp"
+            android:scaleType="centerInside"
             android:background="@android:color/white"
             android:elevation="2dp" />
 

@@ -65,6 +65,10 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
     implementation("androidx.appcompat:appcompat:1.7.0")
+    
+    // JLatexMath para renderizar ecuaciones offline
+    implementation("org.scilab.forge:jlatexmath:1.0.7")
+    
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
