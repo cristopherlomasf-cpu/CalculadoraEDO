@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Permiso de Internet para cargar MathJax en el WebView -->
-    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Permiso de Internet ELIMINADO - App funciona 100% offline -->
 
     <application
         android:allowBackup="true"
