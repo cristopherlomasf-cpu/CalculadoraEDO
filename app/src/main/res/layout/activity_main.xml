@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- EditText oculto: solo lo usa el teclado -->
+        <EditText
+            android:id="@+id/editEdo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <!-- Vista previa -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vista previa:"
+            android:paddingTop="4dp" />
+
+        <WebView
+            android:id="@+id/webPreview"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+            android:background="@android:color/white"
+            android:elevation="2dp" />
+
+        <!-- Teclado matemático -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Teclado matemático:" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#EEEEEE"
+            android:padding="6dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp">
+
+            <!-- Fila 7 8 9 4 5 6 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button android:id="@+id/btn7" style="@style/TeclaEstilo" android:text="7" />
+                <Button android:id="@+id/btn8" style="@style/TeclaEstilo" android:text="8" />
+                <Button android:id="@+id/btn9" style="@style/TeclaEstilo" android:text="9" />
+                <Button android:id="@+id/btn4" style="@style/TeclaEstilo" android:text="4" />
+                <Button android:id="@+id/btn5" style="@style/TeclaEstilo" android:text="5" />
+                <Button android:id="@+id/btn6" style="@style/TeclaEstilo" android:text="6" />
+            </LinearLayout>
+
+            <!-- Fila 1 2 3 0 . x y -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <Button android:id="@+id/btn1" style="@style/TeclaEstilo" android:text="1" />
+                <Button android:id="@+id/btn2" style="@style/TeclaEstilo" android:text="2" />
+                <Button android:id="@+id/btn3" style="@style/TeclaEstilo" android:text="3" />
+                <Button android:id="@+id/btn0" style="@style/TeclaEstilo" android:text="0" />
+                <Button android:id="@+id/btnDot" style="@style/TeclaEstilo" android:text="." />
+                <Button android:id="@+id/btnX" style="@style/TeclaEstilo" android:text="x" />
+                <Button android:id="@+id/btnY" style="@style/TeclaEstilo" android:text="y" />
+            </LinearLayout>
+
+            <!-- Fila operadores (paréntesis separados) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <Button android:id="@+id/btnPlus" style="@style/TeclaEstilo" android:text="+" />
+                <Button android:id="@+id/btnMinus" style="@style/TeclaEstilo" android:text="−" />
+                <Button android:id="@+id/btnTimes" style="@style/TeclaEstilo" android:text="·" />
+                <Button android:id="@+id/btnDiv" style="@style/TeclaEstilo" android:text="/" />
+                <Button android:id="@+id/btnEqual" style="@style/TeclaEstilo" android:text="=" />
+
+                <Button android:id="@+id/btnLPar" style="@style/TeclaEstilo" android:text="(" />
+                <Button android:id="@+id/btnRPar" style="@style/TeclaEstilo" android:text=")" />
+            </LinearLayout>
+
+            <!-- Fila estructuras -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <Button android:id="@+id/btnFrac" style="@style/TeclaEstilo" android:text="frac" />
+                <Button android:id="@+id/btnSup" style="@style/TeclaEstilo" android:text="xⁿ" />
+                <Button android:id="@+id/btnSub" style="@style/TeclaEstilo" android:text="xₙ" />
+                <Button android:id="@+id/btnSqrt" style="@style/TeclaEstilo" android:text="√" />
+                <Button android:id="@+id/btnInt" style="@style/TeclaEstilo" android:text="∫" />
+                <Button android:id="@+id/btnSum" style="@style/TeclaEstilo" android:text="∑" />
+            </LinearLayout>
+
+            <!-- Fila nuevos: potencia, dx, dy -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <Button android:id="@+id/btnPow" style="@style/TeclaEstilo" android:text="^" />
+                <Button android:id="@+id/btnDx" style="@style/TeclaEstilo" android:text="dx" />
+                <Button android:id="@+id/btnDy" style="@style/TeclaEstilo" android:text="dy" />
+            </LinearLayout>
+
+            <!-- Fila derivadas, griegas y borrar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <Button
+                    android:id="@+id/btnYprime"
+                    style="@style/TeclaEstilo"
+                    android:layout_weight="2"
+                    android:text="y'" />
+
+                <Button
+                    android:id="@+id/btnYsec"
+                    style="@style/TeclaEstilo"
+                    android:layout_weight="2"
+                    android:text="y''" />
+
+                <Button android:id="@+id/btnAlpha" style="@style/TeclaEstilo" android:text="α" />
+                <Button android:id="@+id/btnBeta" style="@style/TeclaEstilo" android:text="β" />
+                <Button android:id="@+id/btnPi" style="@style/TeclaEstilo" android:text="π" />
+                <Button android:id="@+id/btnDel" style="@style/TeclaEstilo" android:text="⌫" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- PVI, botón resolver y salida -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PVI opcional (x0,y0):" />
+
+        <EditText
+            android:id="@+id/editIcs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="0,1"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btnResolver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="RESOLVER" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salida:"
+            android:paddingTop="8dp" />
+
+        <TextView
+            android:id="@+id/textResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:paddingTop="4dp" />
+
+        <WebView
+            android:id="@+id/webLatex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/white"
+            android:elevation="2dp" />
+
+    </LinearLayout>
+</ScrollView>
